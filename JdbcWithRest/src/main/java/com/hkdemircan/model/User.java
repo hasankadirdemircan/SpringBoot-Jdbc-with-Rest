@@ -1,9 +1,23 @@
 package com.hkdemircan.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Entity(name = "user")
+@Table(name = "persons")
 public class User {
+
+    @Id
+    @NotNull
     private Long id;
+
     private String firstName;
+
     private String lastName;
+
+    public User() {
+        super();
+    }
 
     public Long getId() {
         return id;
